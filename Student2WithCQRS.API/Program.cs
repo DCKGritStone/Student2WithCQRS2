@@ -1,13 +1,8 @@
-using Student2WithCQRS.API;
-
+using Student2WithCQRS.Application;
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-/*
 builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructureServices(builder.Configuration);*/
-
-builder.Host(Startup);
+builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
